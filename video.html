@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Video Player</title>
+    <script src="scripts/videoScript.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Daniel McAdam, JavaScript Video Player</h1>
+    </header>
+
+    <section id="videoContainer">
+        <video width=640 height=360 poster="images/poster.jpg">
+            <source src="video/mp4/testVideo.mp4" type="video/mp4">
+            <source src="video/webM/testVideo.webm" type="video/webm">
+        
+        <p>Your browser doesn't support HTML5 video. You can download the video file <a href="video/mp4/testVideo.mp4">here</a> instead.</p>
+        </video>
+        
+        <div id="videoControls">
+        <button type="button" id="playPause">Play</button>
+        <button type="button" id="muteUnmute">Mute</button>
+            
+            <input type="range" id="seekBar" min=0 max=100 step=1 value=0>
+            <input type="range" id="volumeBar" min=0 max=10 step=1 value=5>
+            <input type="text" readonly id="volumeField" size="1">
+            <input type="text" readonly id="durationField" size="4">
+            <input type="text" readonly id="currentTimeField" size="4">
+            
+            <select>
+                <option value="2">2x</option>
+                <option value="1.75">1.75x</option>
+                <option value="1.5">1.5x</option>
+                <option value="1.25">1.25x</option>
+                <option value="1">1x</option>
+                <option value="0.75">0.75x</option>
+                <option value="0.50">0.5x</option>
+            </select>
+            
+            <button type="button" id="forward10Second"> &gt;&gt; </button>
+            <button type="button" id="backward30Second"> &lt;&lt; </button>
+            
+        </div>
+
+    </section>
+
+</body>
+
+</html>
